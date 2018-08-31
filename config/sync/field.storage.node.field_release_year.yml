@@ -1,0 +1,21 @@
+uuid: 70d9fc2f-c902-4046-8bff-d094e55a936a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_release_year
+field_name: field_release_year
+entity_type: node
+type: string
+settings:
+  max_length: 55
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

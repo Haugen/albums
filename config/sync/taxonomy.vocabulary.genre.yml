@@ -1,0 +1,9 @@
+uuid: 4e3cdc16-f28f-4d07-a75a-7224715f8569
+langcode: en
+status: true
+dependencies: {  }
+name: Genre
+vid: genre
+description: 'The genre of this album/artist.'
+hierarchy: 0
+weight: 0

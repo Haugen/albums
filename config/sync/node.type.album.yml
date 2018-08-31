@@ -10,7 +10,7 @@ third_party_settings:
     parent: ''
 name: Album
 type: album
-description: ''
+description: 'Music album.'
 help: ''
 new_revision: false
 preview_mode: 1
