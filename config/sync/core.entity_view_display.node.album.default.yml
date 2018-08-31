@@ -1,0 +1,26 @@
+uuid: ec155ce7-215e-45ab-b5bf-559db68235b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.album.body
+    - node.type.album
+  module:
+    - text
+    - user
+id: node.album.default
+targetEntityType: node
+bundle: album
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }
