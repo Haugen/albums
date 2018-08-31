@@ -1,0 +1,24 @@
+uuid: 3de0c083-c90e-4fa9-bc2e-424eaf396704
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.album_list
+  module:
+    - views
+  theme:
+    - bartik
+id: album_view
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:album_list-block_1'
+settings:
+  id: 'views_block:album_list-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }
