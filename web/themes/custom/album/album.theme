@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function album_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+  // Can't seam to print $variables here due to its huge size. I've increased
+  // memory_limit in php.ini and added mysql conf to allow for big packages, but
+  // still massive page load that break everything.
+  //ksm($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function album_preprocess_node(&$variables) {
+  //ksm($variables);
+}
