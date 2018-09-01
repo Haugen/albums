@@ -1,0 +1,18 @@
+{
+  "name": "Albums",
+  "version": "1.0.0",
+  "description": "Albums site",
+  "license": "MIT",
+  "repository": "https://github.com/Haugen/albums",
+  "devDependencies": {
+    "bootstrap": "~4.1.3",
+    "grunt": "~1.0.3",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-watch": "~1.1.0",
+    "grunt-sass": "^3.0.1",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.9.3",
+    "popper.js": "^1.14.3"
+  }
+}
