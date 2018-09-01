@@ -1,0 +1,20 @@
+uuid: b2a51d11-f6f7-4597-ba26-a3479de78880
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - album
+id: messages
+theme: album
+region: content
+weight: -1
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }
