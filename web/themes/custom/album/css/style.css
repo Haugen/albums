@@ -3055,7 +3055,7 @@ input[type="button"].btn-block {
     .navbar-dark .navbar-text a:hover, .navbar-dark .navbar-text a:focus {
       color: #fff; }
 
-.card {
+.card, article {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -3065,13 +3065,13 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem; }
-  .card > hr {
+  .card > hr, article > hr {
     margin-right: 0;
     margin-left: 0; }
-  .card > .list-group:first-child .list-group-item:first-child {
+  .card > .list-group:first-child .list-group-item:first-child, article > .list-group:first-child .list-group-item:first-child {
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem; }
-  .card > .list-group:last-child .list-group-item:last-child {
+  .card > .list-group:last-child .list-group-item:last-child, article > .list-group:last-child .list-group-item:last-child {
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem; }
 
@@ -3134,7 +3134,7 @@ input[type="button"].btn-block {
   width: 100%;
   border-radius: calc(0.25rem - 1px); }
 
-.card-img-top {
+.card-img-top, article img {
   width: 100%;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px); }
@@ -3147,14 +3147,14 @@ input[type="button"].btn-block {
 .card-deck {
   display: flex;
   flex-direction: column; }
-  .card-deck .card {
+  .card-deck .card, .card-deck article {
     margin-bottom: 15px; }
   @media (min-width: 576px) {
     .card-deck {
       flex-flow: row wrap;
       margin-right: -15px;
       margin-left: -15px; }
-      .card-deck .card {
+      .card-deck .card, .card-deck article {
         display: flex;
         flex: 1 0 0%;
         flex-direction: column;
@@ -3165,54 +3165,63 @@ input[type="button"].btn-block {
 .card-group {
   display: flex;
   flex-direction: column; }
-  .card-group > .card {
+  .card-group > .card, .card-group > article {
     margin-bottom: 15px; }
   @media (min-width: 576px) {
     .card-group {
       flex-flow: row wrap; }
-      .card-group > .card {
+      .card-group > .card, .card-group > article {
         flex: 1 0 0%;
         margin-bottom: 0; }
-        .card-group > .card + .card {
+        .card-group > .card + .card, .card-group > article + .card, .card-group > .card + article, .card-group > article + article {
           margin-left: 0;
           border-left: 0; }
-        .card-group > .card:first-child {
+        .card-group > .card:first-child, .card-group > article:first-child {
           border-top-right-radius: 0;
           border-bottom-right-radius: 0; }
-          .card-group > .card:first-child .card-img-top,
-          .card-group > .card:first-child .card-header {
+          .card-group > .card:first-child .card-img-top, .card-group > article:first-child .card-img-top, .card-group > .card:first-child article img, article .card-group > .card:first-child img, .card-group > article:first-child img,
+          .card-group > .card:first-child .card-header,
+          .card-group > article:first-child .card-header {
             border-top-right-radius: 0; }
-          .card-group > .card:first-child .card-img-bottom,
-          .card-group > .card:first-child .card-footer {
+          .card-group > .card:first-child .card-img-bottom, .card-group > article:first-child .card-img-bottom,
+          .card-group > .card:first-child .card-footer,
+          .card-group > article:first-child .card-footer {
             border-bottom-right-radius: 0; }
-        .card-group > .card:last-child {
+        .card-group > .card:last-child, .card-group > article:last-child {
           border-top-left-radius: 0;
           border-bottom-left-radius: 0; }
-          .card-group > .card:last-child .card-img-top,
-          .card-group > .card:last-child .card-header {
+          .card-group > .card:last-child .card-img-top, .card-group > article:last-child .card-img-top, .card-group > .card:last-child article img, article .card-group > .card:last-child img, .card-group > article:last-child img,
+          .card-group > .card:last-child .card-header,
+          .card-group > article:last-child .card-header {
             border-top-left-radius: 0; }
-          .card-group > .card:last-child .card-img-bottom,
-          .card-group > .card:last-child .card-footer {
+          .card-group > .card:last-child .card-img-bottom, .card-group > article:last-child .card-img-bottom,
+          .card-group > .card:last-child .card-footer,
+          .card-group > article:last-child .card-footer {
             border-bottom-left-radius: 0; }
-        .card-group > .card:only-child {
+        .card-group > .card:only-child, .card-group > article:only-child {
           border-radius: 0.25rem; }
-          .card-group > .card:only-child .card-img-top,
-          .card-group > .card:only-child .card-header {
+          .card-group > .card:only-child .card-img-top, .card-group > article:only-child .card-img-top, .card-group > .card:only-child article img, article .card-group > .card:only-child img, .card-group > article:only-child img,
+          .card-group > .card:only-child .card-header,
+          .card-group > article:only-child .card-header {
             border-top-left-radius: 0.25rem;
             border-top-right-radius: 0.25rem; }
-          .card-group > .card:only-child .card-img-bottom,
-          .card-group > .card:only-child .card-footer {
+          .card-group > .card:only-child .card-img-bottom, .card-group > article:only-child .card-img-bottom,
+          .card-group > .card:only-child .card-footer,
+          .card-group > article:only-child .card-footer {
             border-bottom-right-radius: 0.25rem;
             border-bottom-left-radius: 0.25rem; }
-        .card-group > .card:not(:first-child):not(:last-child):not(:only-child) {
+        .card-group > .card:not(:first-child):not(:last-child):not(:only-child), .card-group > article:not(:first-child):not(:last-child):not(:only-child) {
           border-radius: 0; }
-          .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-img-top,
+          .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-img-top, .card-group > article:not(:first-child):not(:last-child):not(:only-child) .card-img-top, .card-group > .card:not(:first-child):not(:last-child):not(:only-child) article img, article .card-group > .card:not(:first-child):not(:last-child):not(:only-child) img, .card-group > article:not(:first-child):not(:last-child):not(:only-child) img,
           .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-img-bottom,
+          .card-group > article:not(:first-child):not(:last-child):not(:only-child) .card-img-bottom,
           .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-header,
-          .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-footer {
+          .card-group > article:not(:first-child):not(:last-child):not(:only-child) .card-header,
+          .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-footer,
+          .card-group > article:not(:first-child):not(:last-child):not(:only-child) .card-footer {
             border-radius: 0; } }
 
-.card-columns .card {
+.card-columns .card, .card-columns article {
   margin-bottom: 0.75rem; }
 
 @media (min-width: 576px) {
@@ -3221,23 +3230,23 @@ input[type="button"].btn-block {
     column-gap: 1.25rem;
     orphans: 1;
     widows: 1; }
-    .card-columns .card {
+    .card-columns .card, .card-columns article {
       display: inline-block;
       width: 100%; } }
 
-.accordion .card:not(:first-of-type):not(:last-of-type) {
+.accordion .card:not(:first-of-type):not(:last-of-type), .accordion article:not(:first-of-type):not(:last-of-type) {
   border-bottom: 0;
   border-radius: 0; }
 
-.accordion .card:not(:first-of-type) .card-header:first-child {
+.accordion .card:not(:first-of-type) .card-header:first-child, .accordion article:not(:first-of-type) .card-header:first-child {
   border-radius: 0; }
 
-.accordion .card:first-of-type {
+.accordion .card:first-of-type, .accordion article:first-of-type {
   border-bottom: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.accordion .card:last-of-type {
+.accordion .card:last-of-type, .accordion article:last-of-type {
   border-top-left-radius: 0;
   border-top-right-radius: 0; }
 
@@ -4333,12 +4342,14 @@ button.bg-light:hover,
 button.bg-light:focus {
   background-color: #dae0e5 !important; }
 
-.bg-dark {
+.bg-dark, article .release-year {
   background-color: #343a40 !important; }
 
-a.bg-dark:hover, a.bg-dark:focus,
+a.bg-dark:hover, article a.release-year:hover, a.bg-dark:focus, article a.release-year:focus,
 button.bg-dark:hover,
-button.bg-dark:focus {
+article button.release-year:hover,
+button.bg-dark:focus,
+article button.release-year:focus {
   background-color: #1d2124 !important; }
 
 .bg-white {
@@ -4423,7 +4434,7 @@ button.bg-dark:focus {
   border-top-left-radius: 0.25rem !important;
   border-bottom-left-radius: 0.25rem !important; }
 
-.rounded-circle {
+.rounded-circle, article .release-year {
   border-radius: 50% !important; }
 
 .rounded-0 {
@@ -5024,7 +5035,7 @@ button.bg-dark:focus {
 .position-relative {
   position: relative !important; }
 
-.position-absolute {
+.position-absolute, article .release-year {
   position: absolute !important; }
 
 .position-fixed {
@@ -5071,7 +5082,7 @@ button.bg-dark:focus {
   clip: auto;
   white-space: normal; }
 
-.shadow-sm {
+.shadow-sm, article {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; }
 
 .shadow {
@@ -5107,7 +5118,7 @@ button.bg-dark:focus {
 .h-75 {
   height: 75% !important; }
 
-.h-100 {
+.h-100, article {
   height: 100% !important; }
 
 .h-auto {
@@ -6217,10 +6228,10 @@ a.text-warning:hover, a.text-warning:focus {
 a.text-danger:hover, a.text-danger:focus {
   color: #bd2130 !important; }
 
-.text-light {
+.text-light, article .release-year {
   color: #f8f9fa !important; }
 
-a.text-light:hover, a.text-light:focus {
+a.text-light:hover, article a.release-year:hover, a.text-light:focus, article a.release-year:focus {
   color: #dae0e5 !important; }
 
 .text-dark {
@@ -6311,5 +6322,21 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+
+article img {
+  height: auto; }
+
+article .card-body {
+  position: relative; }
+
+article .card-title,
+article .card-subtitle {
+  padding-right: 50px; }
+
+article .release-year {
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  line-height: 30px; }
 
 /*# sourceMappingURL=style.css.map */

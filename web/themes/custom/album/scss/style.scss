@@ -1,1 +1,32 @@
 @import '../node_modules/bootstrap/scss/bootstrap';
+
+article {
+  @extend .card;
+  @extend .h-100;
+  @extend .shadow-sm;
+
+  img {
+    @extend .card-img-top;
+    height: auto;
+  }
+
+  .card-body {
+    position: relative;
+  }
+
+  .card-title,
+  .card-subtitle {
+    padding-right: 50px;
+  }
+
+  .release-year {
+    @extend .position-absolute;
+    top: 10px;
+    right: 10px;
+    @extend .bg-dark;
+    @extend .text-light;
+    @extend .rounded-circle;
+    padding: 10px;
+    line-height: 30px;
+  }
+}

@@ -71,11 +71,16 @@
  */
 #}
 <article{{ attributes }}>
-
-  <div{{ content_attributes }}>
-    {{ content.field_image }}
-    {{ label }}
-    {{ content.field_artist }}
+  {{ content.field_image }}
+  <div class="card-body">
+    <h5 class="card-title">{{ label }}</h5>
+    <h6 class="card-subtitle text-muted mb-2">{{ content.field_artist }}</h6>
+    <small class="card-text">{{ content.body }}</small>
+    <div class="spotify-link">{{ content.field_spotify_link }}</div>
+    <small class="release-year">{{ content.field_release_year }}</small>
+  </div>
+  <div class="card-footer text-muted">
+    <small>{{ content.field_genre }}</small>
   </div>
 
 </article>
