@@ -9,4 +9,11 @@ regions:
   footer: 'Footer'
 
 libraries:
-  - album/global-styling
+  - album/global-css
+  - album/global-js
+
+stylesheets-remove:
+  - albums/web/core/themes/stable/css/system/components/clearfix.module.css
+  - albums/web/core/themes/stable/css/system/components/container-inline.module.css
+  - albums/web/core/themes/stable/css/system/components/fieldgroup.module.css
+  - albums/web/core/themes/stable/css/system/components/align.module.css

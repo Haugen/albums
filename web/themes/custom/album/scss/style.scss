@@ -21,12 +21,28 @@ article {
 
   .release-year {
     @extend .position-absolute;
-    top: 10px;
-    right: 10px;
-    @extend .bg-dark;
-    @extend .text-light;
-    @extend .rounded-circle;
-    padding: 10px;
-    line-height: 30px;
+    top: 20px;
+    right: 20px;
+    @extend .badge;
+    @extend .badge-dark;
+  }
+
+  .spotify-link {
+    a {
+      @extend .btn;
+      @extend .btn-outline-primary;
+      border-radius: 25px;
+    }
+  }
+
+  .genre {
+    margin: 0;
+    padding: 0;
+
+    li {
+      @extend .badge;
+      @extend .badge-dark;
+      @extend .badge-pill;
+    }
   }
 }

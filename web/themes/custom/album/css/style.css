@@ -1593,7 +1593,7 @@ textarea.form-control {
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn {
+.btn, article .spotify-link a {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -1607,20 +1607,22 @@ textarea.form-control {
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media screen and (prefers-reduced-motion: reduce) {
-    .btn {
+    .btn, article .spotify-link a {
       transition: none; } }
-  .btn:hover, .btn:focus {
+  .btn:hover, article .spotify-link a:hover, .btn:focus, article .spotify-link a:focus {
     text-decoration: none; }
-  .btn:focus, .btn.focus {
+  .btn:focus, article .spotify-link a:focus, .btn.focus, article .spotify-link a.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
-  .btn.disabled, .btn:disabled {
+  .btn.disabled, article .spotify-link a.disabled, .btn:disabled, article .spotify-link a:disabled {
     opacity: 0.65; }
-  .btn:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled), article .spotify-link a:not(:disabled):not(.disabled) {
     cursor: pointer; }
 
-a.btn.disabled,
-fieldset:disabled a.btn {
+a.btn.disabled, article .spotify-link a.disabled,
+fieldset:disabled a.btn,
+fieldset:disabled article .spotify-link a,
+article .spotify-link fieldset:disabled a {
   pointer-events: none; }
 
 .btn-primary {
@@ -1807,27 +1809,29 @@ fieldset:disabled a.btn {
     .show > .btn-dark.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
 
-.btn-outline-primary {
+.btn-outline-primary, article .spotify-link a {
   color: #007bff;
   background-color: transparent;
   background-image: none;
   border-color: #007bff; }
-  .btn-outline-primary:hover {
+  .btn-outline-primary:hover, article .spotify-link a:hover {
     color: #fff;
     background-color: #007bff;
     border-color: #007bff; }
-  .btn-outline-primary:focus, .btn-outline-primary.focus {
+  .btn-outline-primary:focus, article .spotify-link a:focus, .btn-outline-primary.focus, article .spotify-link a.focus {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); }
-  .btn-outline-primary.disabled, .btn-outline-primary:disabled {
+  .btn-outline-primary.disabled, article .spotify-link a.disabled, .btn-outline-primary:disabled, article .spotify-link a:disabled {
     color: #007bff;
     background-color: transparent; }
-  .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
-  .show > .btn-outline-primary.dropdown-toggle {
+  .btn-outline-primary:not(:disabled):not(.disabled):active, article .spotify-link a:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, article .spotify-link a:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-primary.dropdown-toggle,
+  article .spotify-link .show > a.dropdown-toggle {
     color: #fff;
     background-color: #007bff;
     border-color: #007bff; }
-    .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
-    .show > .btn-outline-primary.dropdown-toggle:focus {
+    .btn-outline-primary:not(:disabled):not(.disabled):active:focus, article .spotify-link a:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, article .spotify-link a:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-outline-primary.dropdown-toggle:focus,
+    article .spotify-link .show > a.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); }
 
 .btn-outline-secondary {
@@ -2008,13 +2012,13 @@ fieldset:disabled a.btn {
     color: #6c757d;
     pointer-events: none; }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, article .spotify-link .btn-group-lg > a {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, article .spotify-link .btn-group-sm > a {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2230,25 +2234,44 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn,
-  .btn-group-vertical > .btn {
+  .btn-group > .btn, article .spotify-link .btn-group > a,
+  .btn-group-vertical > .btn,
+  article .spotify-link .btn-group-vertical > a {
     position: relative;
     flex: 0 1 auto; }
-    .btn-group > .btn:hover,
-    .btn-group-vertical > .btn:hover {
+    .btn-group > .btn:hover, article .spotify-link .btn-group > a:hover,
+    .btn-group-vertical > .btn:hover,
+    article .spotify-link .btn-group-vertical > a:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+    .btn-group > .btn:focus, article .spotify-link .btn-group > a:focus, .btn-group > .btn:active, article .spotify-link .btn-group > a:active, .btn-group > .btn.active, article .spotify-link .btn-group > a.active,
     .btn-group-vertical > .btn:focus,
+    article .spotify-link .btn-group-vertical > a:focus,
     .btn-group-vertical > .btn:active,
-    .btn-group-vertical > .btn.active {
+    article .spotify-link .btn-group-vertical > a:active,
+    .btn-group-vertical > .btn.active,
+    article .spotify-link .btn-group-vertical > a.active {
       z-index: 1; }
-  .btn-group .btn + .btn,
+  .btn-group .btn + .btn, .btn-group article .spotify-link a + .btn, article .spotify-link .btn-group a + .btn, .btn-group article .spotify-link .btn + a, article .spotify-link .btn-group .btn + a, .btn-group article .spotify-link a + a, article .spotify-link .btn-group a + a,
   .btn-group .btn + .btn-group,
+  .btn-group article .spotify-link a + .btn-group,
+  article .spotify-link .btn-group a + .btn-group,
   .btn-group .btn-group + .btn,
+  .btn-group article .spotify-link .btn-group + a,
+  article .spotify-link .btn-group .btn-group + a,
   .btn-group .btn-group + .btn-group,
   .btn-group-vertical .btn + .btn,
+  .btn-group-vertical article .spotify-link a + .btn,
+  article .spotify-link .btn-group-vertical a + .btn,
+  .btn-group-vertical article .spotify-link .btn + a,
+  article .spotify-link .btn-group-vertical .btn + a,
+  .btn-group-vertical article .spotify-link a + a,
+  article .spotify-link .btn-group-vertical a + a,
   .btn-group-vertical .btn + .btn-group,
+  .btn-group-vertical article .spotify-link a + .btn-group,
+  article .spotify-link .btn-group-vertical a + .btn-group,
   .btn-group-vertical .btn-group + .btn,
+  .btn-group-vertical article .spotify-link .btn-group + a,
+  article .spotify-link .btn-group-vertical .btn-group + a,
   .btn-group-vertical .btn-group + .btn-group {
     margin-left: -1px; }
 
@@ -2259,16 +2282,18 @@ input[type="button"].btn-block {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:first-child {
+.btn-group > .btn:first-child, article .spotify-link .btn-group > a:first-child {
   margin-left: 0; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group > .btn-group:not(:last-child) > .btn {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), article .spotify-link .btn-group > a:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn,
+article .spotify-link .btn-group > .btn-group:not(:last-child) > a {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child),
-.btn-group > .btn-group:not(:first-child) > .btn {
+.btn-group > .btn:not(:first-child), article .spotify-link .btn-group > a:not(:first-child),
+.btn-group > .btn-group:not(:first-child) > .btn,
+article .spotify-link .btn-group > .btn-group:not(:first-child) > a {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2282,11 +2307,11 @@ input[type="button"].btn-block {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, article .spotify-link .btn-group-sm > a + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, article .spotify-link .btn-group-lg > a + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2294,31 +2319,39 @@ input[type="button"].btn-block {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical .btn,
+  .btn-group-vertical .btn, .btn-group-vertical article .spotify-link a, article .spotify-link .btn-group-vertical a,
   .btn-group-vertical .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn + .btn,
+  .btn-group-vertical > .btn + .btn, article .spotify-link .btn-group-vertical > a + .btn, article .spotify-link .btn-group-vertical > .btn + a, article .spotify-link .btn-group-vertical > a + a,
   .btn-group-vertical > .btn + .btn-group,
+  article .spotify-link .btn-group-vertical > a + .btn-group,
   .btn-group-vertical > .btn-group + .btn,
+  article .spotify-link .btn-group-vertical > .btn-group + a,
   .btn-group-vertical > .btn-group + .btn-group {
     margin-top: -1px;
     margin-left: 0; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-  .btn-group-vertical > .btn-group:not(:last-child) > .btn {
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), article .spotify-link .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn-group:not(:last-child) > .btn,
+  article .spotify-link .btn-group-vertical > .btn-group:not(:last-child) > a {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child),
-  .btn-group-vertical > .btn-group:not(:first-child) > .btn {
+  .btn-group-vertical > .btn:not(:first-child), article .spotify-link .btn-group-vertical > a:not(:first-child),
+  .btn-group-vertical > .btn-group:not(:first-child) > .btn,
+  article .spotify-link .btn-group-vertical > .btn-group:not(:first-child) > a {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn,
-.btn-group-toggle > .btn-group > .btn {
+.btn-group-toggle > .btn, article .spotify-link .btn-group-toggle > a,
+.btn-group-toggle > .btn-group > .btn,
+article .spotify-link .btn-group-toggle > .btn-group > a {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], article .spotify-link .btn-group-toggle > a input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
+  article .spotify-link .btn-group-toggle > a input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
-  .btn-group-toggle > .btn-group > .btn input[type="checkbox"] {
+  article .spotify-link .btn-group-toggle > .btn-group > a input[type="radio"],
+  .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
+  article .spotify-link .btn-group-toggle > .btn-group > a input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -2374,18 +2407,34 @@ input[type="button"].btn-block {
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn,
-  .input-group-append .btn {
+  .input-group-prepend .btn, .input-group-prepend article .spotify-link a, article .spotify-link .input-group-prepend a,
+  .input-group-append .btn,
+  .input-group-append article .spotify-link a,
+  article .spotify-link .input-group-append a {
     position: relative;
     z-index: 2; }
-  .input-group-prepend .btn + .btn,
+  .input-group-prepend .btn + .btn, .input-group-prepend article .spotify-link a + .btn, article .spotify-link .input-group-prepend a + .btn, .input-group-prepend article .spotify-link .btn + a, article .spotify-link .input-group-prepend .btn + a, .input-group-prepend article .spotify-link a + a, article .spotify-link .input-group-prepend a + a,
   .input-group-prepend .btn + .input-group-text,
+  .input-group-prepend article .spotify-link a + .input-group-text,
+  article .spotify-link .input-group-prepend a + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
+  .input-group-prepend article .spotify-link .input-group-text + a,
+  article .spotify-link .input-group-prepend .input-group-text + a,
   .input-group-append .btn + .btn,
+  .input-group-append article .spotify-link a + .btn,
+  article .spotify-link .input-group-append a + .btn,
+  .input-group-append article .spotify-link .btn + a,
+  article .spotify-link .input-group-append .btn + a,
+  .input-group-append article .spotify-link a + a,
+  article .spotify-link .input-group-append a + a,
   .input-group-append .btn + .input-group-text,
+  .input-group-append article .spotify-link a + .input-group-text,
+  article .spotify-link .input-group-append a + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
-  .input-group-append .input-group-text + .btn {
+  .input-group-append .input-group-text + .btn,
+  .input-group-append article .spotify-link .input-group-text + a,
+  article .spotify-link .input-group-append .input-group-text + a {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -2416,7 +2465,9 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
-.input-group-lg > .input-group-append > .btn {
+article .spotify-link .input-group-lg > .input-group-prepend > a,
+.input-group-lg > .input-group-append > .btn,
+article .spotify-link .input-group-lg > .input-group-append > a {
   height: calc(2.875rem + 2px);
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
@@ -2427,27 +2478,33 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
-.input-group-sm > .input-group-append > .btn {
+article .spotify-link .input-group-sm > .input-group-prepend > a,
+.input-group-sm > .input-group-append > .btn,
+article .spotify-link .input-group-sm > .input-group-append > a {
   height: calc(1.8125rem + 2px);
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
   border-radius: 0.2rem; }
 
-.input-group > .input-group-prepend > .btn,
+.input-group > .input-group-prepend > .btn, article .spotify-link .input-group > .input-group-prepend > a,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
+article .spotify-link .input-group > .input-group-append:not(:last-child) > a,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+article .spotify-link .input-group > .input-group-append:last-child > a:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn,
+.input-group > .input-group-append > .btn, article .spotify-link .input-group > .input-group-append > a,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
+article .spotify-link .input-group > .input-group-prepend:not(:first-child) > a,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+article .spotify-link .input-group > .input-group-prepend:first-child > a:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -3352,7 +3409,7 @@ input[type="button"].btn-block {
   border-top-right-radius: 0.2rem;
   border-bottom-right-radius: 0.2rem; }
 
-.badge {
+.badge, article .release-year, article .genre li {
   display: inline-block;
   padding: 0.25em 0.4em;
   font-size: 75%;
@@ -3362,14 +3419,14 @@ input[type="button"].btn-block {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.25rem; }
-  .badge:empty {
+  .badge:empty, article .release-year:empty, article .genre li:empty {
     display: none; }
 
-.btn .badge {
+.btn .badge, article .spotify-link a .badge, .btn article .release-year, article .btn .release-year, article .spotify-link a .release-year, .btn article .genre li, article .genre .btn li, article .spotify-link a .genre li, article .genre .spotify-link a li {
   position: relative;
   top: -1px; }
 
-.badge-pill {
+.badge-pill, article .genre li {
   padding-right: 0.6em;
   padding-left: 0.6em;
   border-radius: 10rem; }
@@ -3430,10 +3487,10 @@ input[type="button"].btn-block {
     text-decoration: none;
     background-color: #dae0e5; }
 
-.badge-dark {
+.badge-dark, article .release-year, article .genre li {
   color: #fff;
   background-color: #343a40; }
-  .badge-dark[href]:hover, .badge-dark[href]:focus {
+  .badge-dark[href]:hover, article .release-year[href]:hover, article .genre li[href]:hover, .badge-dark[href]:focus, article .release-year[href]:focus, article .genre li[href]:focus {
     color: #fff;
     text-decoration: none;
     background-color: #1d2124; }
@@ -4342,14 +4399,12 @@ button.bg-light:hover,
 button.bg-light:focus {
   background-color: #dae0e5 !important; }
 
-.bg-dark, article .release-year {
+.bg-dark {
   background-color: #343a40 !important; }
 
-a.bg-dark:hover, article a.release-year:hover, a.bg-dark:focus, article a.release-year:focus,
+a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
-article button.release-year:hover,
-button.bg-dark:focus,
-article button.release-year:focus {
+button.bg-dark:focus {
   background-color: #1d2124 !important; }
 
 .bg-white {
@@ -4434,7 +4489,7 @@ article button.release-year:focus {
   border-top-left-radius: 0.25rem !important;
   border-bottom-left-radius: 0.25rem !important; }
 
-.rounded-circle, article .release-year {
+.rounded-circle {
   border-radius: 50% !important; }
 
 .rounded-0 {
@@ -6228,10 +6283,10 @@ a.text-warning:hover, a.text-warning:focus {
 a.text-danger:hover, a.text-danger:focus {
   color: #bd2130 !important; }
 
-.text-light, article .release-year {
+.text-light {
   color: #f8f9fa !important; }
 
-a.text-light:hover, article a.release-year:hover, a.text-light:focus, article a.release-year:focus {
+a.text-light:hover, a.text-light:focus {
   color: #dae0e5 !important; }
 
 .text-dark {
@@ -6302,7 +6357,7 @@ a.text-dark:hover, a.text-dark:focus {
     min-width: 992px !important; }
   .navbar {
     display: none; }
-  .badge {
+  .badge, article .release-year, article .genre li {
     border: 1px solid #000; }
   .table {
     border-collapse: collapse !important; }
@@ -6334,9 +6389,14 @@ article .card-subtitle {
   padding-right: 50px; }
 
 article .release-year {
-  top: 10px;
-  right: 10px;
-  padding: 10px;
-  line-height: 30px; }
+  top: 20px;
+  right: 20px; }
+
+article .spotify-link a {
+  border-radius: 25px; }
+
+article .genre {
+  margin: 0;
+  padding: 0; }
 
 /*# sourceMappingURL=style.css.map */
