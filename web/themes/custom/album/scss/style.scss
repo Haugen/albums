@@ -1,5 +1,18 @@
 @import '../node_modules/bootstrap/scss/bootstrap';
 
+header[role="banner"] {
+  padding: 30px 0;
+  @extend .bg-dark;
+  @extend .text-light;
+  @extend .mb-4;
+}
+
+footer[role="siteFooter"] {
+  padding: 30px 0;
+  @extend .bg-dark;
+  @extend .text-light;
+}
+
 article {
   @extend .card;
   @extend .h-100;

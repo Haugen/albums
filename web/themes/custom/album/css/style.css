@@ -4399,7 +4399,7 @@ button.bg-light:hover,
 button.bg-light:focus {
   background-color: #dae0e5 !important; }
 
-.bg-dark {
+.bg-dark, header[role="banner"], footer[role="siteFooter"] {
   background-color: #343a40 !important; }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -5272,7 +5272,7 @@ button.bg-dark:focus {
 .mx-4 {
   margin-right: 1.5rem !important; }
 
-.mb-4,
+.mb-4, header[role="banner"],
 .my-4 {
   margin-bottom: 1.5rem !important; }
 
@@ -6283,7 +6283,7 @@ a.text-warning:hover, a.text-warning:focus {
 a.text-danger:hover, a.text-danger:focus {
   color: #bd2130 !important; }
 
-.text-light {
+.text-light, header[role="banner"], footer[role="siteFooter"] {
   color: #f8f9fa !important; }
 
 a.text-light:hover, a.text-light:focus {
@@ -6377,6 +6377,12 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+
+header[role="banner"] {
+  padding: 30px 0; }
+
+footer[role="siteFooter"] {
+  padding: 30px 0; }
 
 article img {
   height: auto; }
