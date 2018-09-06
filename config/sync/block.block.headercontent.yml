@@ -1,0 +1,25 @@
+uuid: 4ccd303e-41d1-4d40-be88-87e71d98632a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b404515e-09a0-486a-bc7d-d66ec56306d6'
+  module:
+    - block_content
+  theme:
+    - album
+id: headercontent
+theme: album
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:b404515e-09a0-486a-bc7d-d66ec56306d6'
+settings:
+  id: 'block_content:b404515e-09a0-486a-bc7d-d66ec56306d6'
+  label: 'Header Content'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

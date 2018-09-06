@@ -1,22 +1,22 @@
-uuid: f4c1dbeb-2836-426c-b7ec-0cfeabddd1c4
+uuid: 93e76015-544f-4951-9e33-d3a0954a5f79
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:c3b108d9-fdf0-46a0-9173-45ca589d2445'
+    - 'block_content:basic:1b21539c-1210-40aa-80ba-259823bbcea2'
   module:
     - block_content
   theme:
     - album
-id: footer
+id: footercontent
 theme: album
 region: footer
 weight: 0
 provider: null
-plugin: 'block_content:c3b108d9-fdf0-46a0-9173-45ca589d2445'
+plugin: 'block_content:1b21539c-1210-40aa-80ba-259823bbcea2'
 settings:
-  id: 'block_content:c3b108d9-fdf0-46a0-9173-45ca589d2445'
-  label: Footer
+  id: 'block_content:1b21539c-1210-40aa-80ba-259823bbcea2'
+  label: 'Footer Content'
   provider: block_content
   label_display: '0'
   status: true
