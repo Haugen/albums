@@ -38,11 +38,15 @@
 #}
 <div class="layout-container">
 
-  {% if page.header %}
-    <header role="banner">
-      {{ page.header }}
-    </header>
-  {% endif %}
+  <header class="jumbotron jumbotron-fluid text-center" role="banner">
+    <div class="container">
+      <h1 class="display-4">Top Notch Albums</h1>
+      <p class="lead text-muted">Presenting my nince favorite albums as of September 2018.<br />
+      Check out each album below, or enjoy a mixed playlist on Spotify.</p>
+      <hr class="my-4" />
+      <a class="btn btn-outline-primary btn-lg" href="spotify:user:haugen:playlist:6Pe9pHYN7yEOVY6kWuKB8d">Spotify Playlist</a>
+    </div>
+  </header>
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
@@ -53,10 +57,9 @@
 
   </main>
 
-  {% if page.footer %}
-    <footer role="siteFooter">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
+  <footer role="siteFooter">
+    <p>Don't forget to check out the <a href="spotify:user:haugen:playlist:6Pe9pHYN7yEOVY6kWuKB8d">Spotify playlist</a>.<br />
+    <small class="text-muted">Project on <a href="">Github</a>.</small></p>
+  </footer>
 
 </div>{# /.layout-container #}

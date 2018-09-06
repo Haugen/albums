@@ -1,16 +1,37 @@
+$primary: #9236d8;
+$font-family-base: 'Raleway', sans-serif;
+$btn-border-radius: 25px;
+$btn-border-radius-lg: 25px;
+
 @import '../node_modules/bootstrap/scss/bootstrap';
 
+body {
+  background: #fff;
+}
+
+h1 {
+  font-weight: bold;
+}
+
 header[role="banner"] {
-  padding: 30px 0;
-  @extend .bg-dark;
-  @extend .text-light;
-  @extend .mb-4;
+  background: #fff;
+  padding: 100px 0;
 }
 
 footer[role="siteFooter"] {
-  padding: 30px 0;
+  padding: 50px 0;
+  margin-top: 50px;
   @extend .bg-dark;
   @extend .text-light;
+  text-align: center;
+
+  a {
+    color: lighten($primary, 20%);
+  }
+}
+
+button a {
+  border-radius: 25px;
 }
 
 article {
@@ -37,14 +58,13 @@ article {
     top: 20px;
     right: 20px;
     @extend .badge;
-    @extend .badge-dark;
+    border: 1px solid lighten($primary, 30%);
   }
 
   .spotify-link {
     a {
       @extend .btn;
       @extend .btn-outline-primary;
-      border-radius: 25px;
     }
   }
 
@@ -54,8 +74,8 @@ article {
 
     li {
       @extend .badge;
-      @extend .badge-dark;
       @extend .badge-pill;
+      border: 1px solid lighten($primary, 30%);
     }
   }
 }
