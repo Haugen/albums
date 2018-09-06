@@ -1,0 +1,25 @@
+uuid: f4c1dbeb-2836-426c-b7ec-0cfeabddd1c4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c3b108d9-fdf0-46a0-9173-45ca589d2445'
+  module:
+    - block_content
+  theme:
+    - album
+id: footer
+theme: album
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:c3b108d9-fdf0-46a0-9173-45ca589d2445'
+settings:
+  id: 'block_content:c3b108d9-fdf0-46a0-9173-45ca589d2445'
+  label: Footer
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

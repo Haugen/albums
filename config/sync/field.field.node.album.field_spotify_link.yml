@@ -15,9 +15,14 @@ label: 'Spotify link'
 description: 'Link to the album on Spotify.'
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    attributes: {  }
+    uri: 'http://change.me'
+    title: 'Listen on Spotify'
+    options: {  }
 default_value_callback: ''
 settings:
   link_type: 17
-  title: 0
+  title: 1
 field_type: link
